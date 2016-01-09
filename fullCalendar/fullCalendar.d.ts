@@ -174,13 +174,13 @@ declare module FullCalendar {
     export interface AgendaOptions {
         allDaySlot?: boolean;
         allDayText?: string;
-        slotDuration?: moment.Duration;
+        slotDuration?: moment.Duration|string;
         slotLabelFormat?: string;
-        slotLabelInterval?: moment.Duration;
-        snapDuration?: moment.Duration;
-        scrollTime?: moment.Duration;
-        minTime?: moment.Duration; // Integer/String
-        maxTime?: moment.Duration; // Integer/String
+        slotLabelInterval?: moment.Duration|string;
+        snapDuration?: moment.Duration|string;
+        scrollTime?: moment.Duration|string;
+        minTime?: moment.Duration|string; // Integer/String
+        maxTime?: moment.Duration|String; // Integer/String
         slotEventOverlap?: boolean;
     }
 
