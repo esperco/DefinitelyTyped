@@ -121,4 +121,12 @@ interface RavenStatic {
      * @return {Raven}
      */
     setUser(user?: any): RavenStatic;
+
+    /*
+     * Set/clear a user to be sent along with the payload.
+     *
+     * @param {object} user An object representing user data [optional]
+     * @return {Raven}
+     */
+    setUserContext(user?: any): RavenStatic;
 }
