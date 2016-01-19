@@ -486,6 +486,15 @@ declare class Bloodhound<T> {
     public noConflict(): any;
 
     /**
+    * Returns the data that matches query. Matches found in the local search
+    * index will be passed to the sync callback. If the data passed to sync
+    * doesn't contain at least sufficient number of datums, remote data will
+    * be requested and then passed to the async callback.
+    */
+    public search(query: string, sync: (datums: T[]) => void,
+                                 async: (datums: T[]) => void): void;
+
+    /**
     * Computes a set of suggestions for query. cb will be invoked with an array of datums that represent said set.
     * cb will always be invoked once synchronously with suggestions that were available on the client.
     * If those suggestions are insufficient (# of suggestions is less than limit) and remote was configured, cb may also be invoked asynchronously with the suggestions available on the client mixed with suggestions from the remote source.
