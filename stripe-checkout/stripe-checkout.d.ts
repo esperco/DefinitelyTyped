@@ -24,6 +24,7 @@ interface StripeCheckoutOptions {
     locale?: string;
     currency?: string;
     panelLabel?: string;
+    billingAddress?: boolean;
     zipCode?: boolean;
     email?: string;
     label?: string;
